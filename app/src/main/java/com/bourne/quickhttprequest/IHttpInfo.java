@@ -10,7 +10,10 @@ import retrofit2.http.Query;
  */
 public interface IHttpInfo {
 
-    //(请手动修改3)
+    /**
+     * 接口参数(请手动修改3)
+     */
     @POST("/iromkoear")
     Call<String> getResult(@Query("viewmode") String viewmode);
+
 }
