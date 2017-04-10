@@ -11,7 +11,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 
 /**
- * 网络请求主体
+ * 网络请求的主体
  */
 public class RetrofitWrapper {
     private static RetrofitWrapper instance;
