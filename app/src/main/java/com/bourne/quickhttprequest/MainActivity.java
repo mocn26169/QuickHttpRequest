@@ -14,12 +14,12 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Log标志
      */
-    private  String TAG;
+    private String TAG;
 
     /**
-     * 服务器地址(请手动修改)
+     * 服务器地址(请手动修改1)
      */
-    public  static String BASEURL="http://blog.csdn.net/";
+    public static String BASEURL = "http://blog.csdn.net/";
 
     /**
      * 网络请求
@@ -36,14 +36,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 请求的参数实体(请手动修改)
+     * 请求的参数实体(请手动修改2)
      */
     public class MyParams {
         /**
          * 参数
          */
         public String viewmode;
-
     }
 
     /**
@@ -53,16 +52,16 @@ public class MainActivity extends AppCompatActivity {
 
         MyParams myParams = null;
         myParams = new MyParams();
-        myParams.viewmode ="contents";
+        myParams.viewmode = "contents";
 
-        Call<String > infoCall = httpInfoModel.getIHttpInfo().getResult(myParams.viewmode);
+        Call<String> infoCall = httpInfoModel.getIHttpInfo().getResult(myParams.viewmode);
 
         infoCall.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 String result = response.body().trim();
                 Log.i(TAG, "请求成功！结果如下：");
-                Log.i(TAG,  result);
+                Log.i(TAG, result);
             }
 
             @Override

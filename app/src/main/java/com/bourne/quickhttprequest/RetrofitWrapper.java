@@ -43,10 +43,10 @@ public class RetrofitWrapper {
                 .build();
     }
 
-    public  static RetrofitWrapper getInstance(String url){
+    public static RetrofitWrapper getInstance(String url) {
 
-        if(null == instance){
-            synchronized (RetrofitWrapper.class){
+        if (null == instance) {
+            synchronized (RetrofitWrapper.class) {
                 instance = new RetrofitWrapper(url);
             }
         }
