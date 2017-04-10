@@ -1,6 +1,7 @@
 package com.bourne.quickhttprequest;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -24,7 +25,7 @@ public class RetrofitWrapper {
             @Override
             public void log(String message) {
                 // 打印Log
-//                Log.i("OkHttp", message);
+                Log.i("OkHttp", message);
             }
         });
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
