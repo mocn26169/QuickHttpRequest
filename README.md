@@ -2,7 +2,7 @@
 
 很多时候，我们要测试某个网络请求，这时候就得有一个快速上手的网络请求框架方便使用。
 
-也发布在我的博客：http://blog.csdn.net/iromkoear/article/details/70037954
+http://blog.csdn.net/iromkoear/article/details/70037954
 
 ## **使用步骤**
 
