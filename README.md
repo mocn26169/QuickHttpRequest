@@ -57,10 +57,10 @@ http://blog.csdn.net/iromkoear?viewmode=contents
 
 只要3步就可以完成一个简单的请求
 
-<img height="480" width="800" src="raw/view.jpg" title=""/>
+<img height="480" width="320" src="raw/view.jpg" title=""/>
 
 
-<img height="300" width="500" src="raw/log.png" title=""/>
+<img height="500" width="800" src="raw/log.png" title=""/>
 
 ## **详细代码**
 
