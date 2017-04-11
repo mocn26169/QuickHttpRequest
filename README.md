@@ -17,7 +17,7 @@ http://blog.csdn.net/iromkoear?viewmode=contents
 
 使用方式：
 
-1、在MainActivity里面修改服务器地址
+1、在MainActivity里面修改服务器地址和参数
 ```
  /**
      * 服务器地址(请手动修改1)
@@ -25,6 +25,17 @@ http://blog.csdn.net/iromkoear?viewmode=contents
     public static String BASEURL = "http://blog.csdn.net/";
 ```
 
+```
+    /**
+     * 请求的参数实体(请手动修改2)
+     */
+    public class MyParams {
+        /**
+         * 参数
+         */
+        public String viewmode;
+    }
+```
 
 2、在IHttpInfo里面修改接口参数
 ```
@@ -38,7 +49,10 @@ http://blog.csdn.net/iromkoear?viewmode=contents
 3、在MainActivity开始请求
 
 ```
- Call<String> infoCall = httpInfoModel.getIHttpInfo().getResult("contents");
+ MyParams myParams = new MyParams();
+        myParams.viewmode ="contents";
+
+        Call<String> infoCall = httpInfoModel.getIHttpInfo().getResult(myParams.viewmode);
 
         infoCall.enqueue(new Callback<String>() {
             @Override

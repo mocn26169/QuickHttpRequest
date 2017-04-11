@@ -35,13 +35,25 @@ public class MainActivity extends AppCompatActivity {
         httpInfoModel = HttpInfoModel.getInstance(this);
     }
 
+    /**
+     * 请求的参数实体(请手动修改2)
+     */
+    public class MyParams {
+        /**
+         * 参数
+         */
+        public String viewmode;
+    }
 
     /**
      * 开始请求
      */
     public void startHttpRequest(View view) {
 
-        Call<String> infoCall = httpInfoModel.getIHttpInfo().getResult("contents");
+        MyParams myParams = new MyParams();
+        myParams.viewmode ="contents";
+
+        Call<String> infoCall = httpInfoModel.getIHttpInfo().getResult(myParams.viewmode);
 
         infoCall.enqueue(new Callback<String>() {
             @Override
